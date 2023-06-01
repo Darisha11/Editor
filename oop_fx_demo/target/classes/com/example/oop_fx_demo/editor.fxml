@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.oop_fx_demo.EditorController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Файл">
+            <items>
+                <MenuItem fx:id="newFile" mnemonicParsing="false" onAction="#onNew" text="Создать" />
+                <MenuItem mnemonicParsing="false" onAction="#onOpen" text="Открыть" />
+                <MenuItem fx:id="save" mnemonicParsing="false" onAction="#onSave" text="Сохранить" />
+                <MenuItem mnemonicParsing="false" onAction="#onSaveAs" text="Сохранить как" />
+                <MenuItem mnemonicParsing="false" onAction="#onClose" text="Закрыть" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Правка">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onCut" text="Вырезать" />
+                  <MenuItem mnemonicParsing="false" onAction="#onCopy" text="Копировать" />
+                  <MenuItem mnemonicParsing="false" onAction="#onPaste" text="Вставить" />
+                  <MenuItem mnemonicParsing="false" onAction="#onDataTime" text="Дата и время" />
+              </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Вид">
+              <items>
+                  <Menu mnemonicParsing="false" onAction="#onFont" text="Шрифт" />
+                  <Menu mnemonicParsing="false" onAction="#onColorText" text="Цвет текста" />
+                  <Menu mnemonicParsing="false" onAction="#onColorFon" text="Цвет фона" />
+              </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Стиль">
+              <items>
+                  <CheckMenuItem fx:id="bold" mnemonicParsing="false" onAction="#onBold" text="Жирный" />
+                  <CheckMenuItem fx:id="kyrs" mnemonicParsing="false" onAction="#onKyrs" text="Курсив" />
+              </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Помощь">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onAbout" text="О программе" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <HBox prefHeight="53.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <TextArea fx:id="areaText" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
